@@ -52,7 +52,31 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: Icons.share,
                       label: "Share",
                       onPressed: (context) => _onDismissed(),
+                    ),
+                    SlidableAction(
+                      backgroundColor: Colors.blue,
+                      icon: Icons.edit,
+                      label: "Edit",
+                      onPressed: (context) => _onDismissed(),
                     )
+                  ],
+                ),
+                endActionPane: ActionPane(
+                  motion: const BehindMotion(),
+                  children: [
+                    SlidableAction(
+                      backgroundColor: Colors.red,
+                      icon: Icons.delete,
+                      label: "Delete",
+                      onPressed: (context) => _onDismissed(),
+                    ),
+                    SlidableAction(
+                      backgroundColor: Colors.yellow,
+                      icon: Icons.save,
+                      label: "Save",
+                      onPressed: (context) => _onDismissed(),
+                    ),
+
                   ],
                 ),
                 child: buildUserListTile(user));
